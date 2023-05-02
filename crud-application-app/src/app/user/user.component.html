@@ -6,14 +6,14 @@
     <div class="grid-header">Email</div>
     <div class="grid-header">Data de Cadastro</div>
     <div class="grid-header"></div>
-    <ng-container *ngFor="let user of users">
-        <div class="grid-item">{{ user.nome }}</div>
-        <div class="grid-item">{{ user.cpf }}</div>
-        <div class="grid-item">{{ user.dataDeNascimento }}</div>
-        <div class="grid-item">{{ user.rendaMensal | currency:'BRL':'symbol':'1.2-2' }}</div>
-        <div class="grid-item">{{ user.email }}</div>
-        <div class="grid-item">{{ user.dataDeCadastro }}</div>
-        <div class="grid-item">
+    <ng-container *ngFor="let user of users; let i = index">
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">{{ user.nome }}</div>
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">{{ user.cpf }}</div>
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">{{ user.dataDeNascimento | date:'dd/MM/yyyy' }}</div>
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">{{ user.rendaMensal | currency:'BRL':'symbol':'1.2-2' }}</div>
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">{{ user.email }}</div>
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">{{ user.dataDeCadastro | date:'dd/MM/yyyy' }}</div>
+        <div class="grid-item" [ngClass]="{'grid-item': true, 'even-row': i % 2 === 1}">
           <ng-container>
             <button class="btn btn-primary" (click)="editUser(user.id)">Edit</button>
             <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
