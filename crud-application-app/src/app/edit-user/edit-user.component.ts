@@ -35,11 +35,10 @@ export class EditUserComponent implements OnInit {
 
   saveUser() {
     this.userService.updateUser(this.user).subscribe(() => {
-      alert('User updated successfully!');
+      alert('Usuário atualizado com sucesso!');
       this.goBack();
     }, error => {
-      console.error('Error updating user:', error);
-      alert('An error occurred while updating the user.');
+      alert('Ocorreu um erro ao atualizar o usuário.');
     });
   }
 

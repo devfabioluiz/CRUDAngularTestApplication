@@ -28,7 +28,7 @@ export class UserComponent implements OnInit {
     if (userId) {
       this.router.navigate(['/users/edit', userId]);
     } else {
-      console.error('Invalid userId');
+      console.error('Id de usuário inválida');
     }
   }
 
@@ -42,19 +42,17 @@ export class UserComponent implements OnInit {
       this.selectedUser = {} as User;
       this.getUsers();
     }, error => {
-      console.log('Error updating user:', error);
-      alert('An error occurred while updating the user.');
+      alert('Houve um erro ao atualizar este usuário.');
     });
   }
   
   deleteUser(userId: number) {
-    if (confirm('Are you sure you want to delete this user?')) {
+    if (confirm('tem certeza que deseja deletar este usuário?')) {
       this.userService.deleteUser(userId).subscribe(() => {
         this.getUsers();
-        alert('User deleted successfully!');
+        alert('User deletado com sucesso!');
       }, error => {
-        console.log('Error deleting user:', error);
-        alert('An error occurred while deleting the user.');
+        alert('Houve um erro ao deletar este usuário.');
       });
     }
   }

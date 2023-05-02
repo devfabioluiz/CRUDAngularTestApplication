@@ -15,7 +15,7 @@ export class CreateUserComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.createForm = this.formBuilder.group({
-      id: 0,
+      id: '',
       nome: '',
       cpf: '',
       dataNascimento: '',
