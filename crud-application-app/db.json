@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "0d91e2a2-0c0a-4f9d-bce6-038d1ab483c1",
+      "nome": "John Doe",
+      "cpf": "123456789",
+      "dataDeNascimento": "1990-01-01",
+      "rendaMensal": 5000,
+      "email": "johndoe@example.com",
+      "dataDeCadastro": "2023-04-30"
+    },
+    {
+      "id": "5d5b9f82-4c62-4b82-8554-4b369051d80d",
+      "nome": "Jane Smith",
+      "cpf": "987654321",
+      "dataDeNascimento": "1985-06-15",
+      "rendaMensal": 8000,
+      "email": "janesmith@example.com",
+      "dataDeCadastro": "2023-04-29"
+    },
+    {
+      "id": "e3b88ff2-c2a2-4cc6-a8a7-0b76e1e37c60",
+      "nome": "David Johnson",
+      "cpf": "456123789",
+      "dataDeNascimento": "1995-09-20",
+      "rendaMensal": 3000,
+      "email": "davidjohnson@example.com",
+      "dataDeCadastro": "2023-04-28"
+    }
+  ]
+}

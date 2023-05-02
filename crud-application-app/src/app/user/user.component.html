@@ -1,0 +1,27 @@
+  <div class="grid-container">
+    <div class="grid-header">Nome</div>
+    <div class="grid-header">CPF</div>
+    <div class="grid-header">Data Nascimento</div>
+    <div class="grid-header">Renda Mensal</div>
+    <div class="grid-header">Email</div>
+    <div class="grid-header">Data de Cadastro</div>
+    <div class="grid-header"></div>
+    <ng-container *ngFor="let user of users">
+        <div class="grid-item">{{ user.nome }}</div>
+        <div class="grid-item">{{ user.cpf }}</div>
+        <div class="grid-item">{{ user.dataDeNascimento }}</div>
+        <div class="grid-item">{{ user.rendaMensal | currency:'BRL':'symbol':'1.2-2' }}</div>
+        <div class="grid-item">{{ user.email }}</div>
+        <div class="grid-item">{{ user.dataDeCadastro }}</div>
+        <div class="grid-item">
+          <ng-container>
+            <button class="btn btn-primary" (click)="editUser(user.id)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+          </ng-container>
+        </div>
+    </ng-container>
+  </div>
+  
+
+
+  

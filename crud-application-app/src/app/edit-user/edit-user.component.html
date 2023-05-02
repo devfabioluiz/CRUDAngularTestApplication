@@ -1,0 +1,30 @@
+<h2>Edit User</h2>
+
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.nome" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input type="text" class="form-control" [(ngModel)]="user.cpf" name="cpf" required>
+  </div>
+  <div class="form-group">
+    <label for="dataDeNascimento">Data de Nascimento</label>
+    <input type="text" class="form-control" [(ngModel)]="user.dataDeNascimento" name="dataDeNascimento" required>
+  </div>
+  <div class="form-group">
+    <label for="rendaMensal">Renda Mensal</label>
+    <input type="text" class="form-control" [(ngModel)]="user.rendaMensal" name="rendaMensal" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" [(ngModel)]="user.email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="dataDeCadastro">Data de Cadastro</label>
+    <input type="text" class="form-control" [(ngModel)]="user.dataDeCadastro" name="dataDeCadastro" required>
+  </div>
+  <button class="btn btn-primary" (click)="saveUser()">Save</button>
+  <button class="btn btn-secondary" (click)="cancelEdit()">Cancelar</button>
+</form>

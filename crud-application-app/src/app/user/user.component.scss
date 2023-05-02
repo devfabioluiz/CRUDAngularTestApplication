@@ -1,0 +1,20 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 10px;
+}
+
+.grid-header {
+  background-color: #11728B;
+  color: #fff;
+  padding: 10px;
+}
+
+.ng-container:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.grid-item {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
